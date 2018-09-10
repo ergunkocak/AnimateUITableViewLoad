@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Demo-->
+        <!--Simple-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimateUITableViewLoad" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,14 +59,60 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Demo" id="dDr-KK-pqX"/>
+                    <navigationItem key="navigationItem" title="Simple" id="dDr-KK-pqX"/>
                     <connections>
                         <outlet property="tableView" destination="xxb-0d-KgS" id="EQ4-fz-w7K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1754" y="134"/>
+        </scene>
+        <!--Demo-->
+        <scene sceneID="szE-We-7Fd">
+            <objects>
+                <viewController id="0Ui-eb-SV9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Qq-gq-LEC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="srp-ex-WXQ">
+                                <rect key="frame" x="32" y="279.5" width="311" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kU-ox-1Vc">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="wzD-Wd-T9a"/>
+                                        </constraints>
+                                        <state key="normal" title="Simple"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="lVU-EQ-76r"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bT-qu-7wu">
+                                        <rect key="frame" x="0.0" y="-343.5" width="311" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="ygg-K1-8Uj"/>
+                                        </constraints>
+                                        <state key="normal" title="..."/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="77V-lz-b1Q" firstAttribute="trailing" secondItem="srp-ex-WXQ" secondAttribute="trailing" constant="32" id="GM4-KN-SvK"/>
+                            <constraint firstItem="srp-ex-WXQ" firstAttribute="leading" secondItem="77V-lz-b1Q" secondAttribute="leading" constant="32" id="Qbk-dD-xRi"/>
+                            <constraint firstItem="srp-ex-WXQ" firstAttribute="centerX" secondItem="77V-lz-b1Q" secondAttribute="centerX" id="SnJ-nH-S72"/>
+                            <constraint firstItem="srp-ex-WXQ" firstAttribute="centerY" secondItem="77V-lz-b1Q" secondAttribute="centerY" id="pF9-Us-dak"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="77V-lz-b1Q"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Demo" id="f3F-04-zaF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8BQ-nT-pU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mql-Pf-3VW">
@@ -81,7 +127,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X15-Pr-V6N"/>
+                        <segue destination="0Ui-eb-SV9" kind="relationship" relationship="rootViewController" id="36G-dC-kEg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wy3-on-7xP" userLabel="First Responder" sceneMemberID="firstResponder"/>

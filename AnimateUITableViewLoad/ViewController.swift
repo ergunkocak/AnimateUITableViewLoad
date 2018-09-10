@@ -13,12 +13,32 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var isHeroActive = true
+    var shallAnimateCellLoad = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if isHeroActive && shallAnimateCellLoad {
+            animateCellLoad()
+            shallAnimateCellLoad = false
+        }
+    }
+
+    func animateCellLoad() {
+        var delayCounter: TimeInterval = 0
+        for cell in tableView.visibleCells {
+            UIView.animate(withDuration: TimeInterval(delayCounter), animations: {
+                cell.contentView.alpha = 1.0
+            }, completion: nil)
+            delayCounter += 0.15
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -38,6 +58,9 @@ extension ViewController: UITableViewDelegate {
             return UITableViewCell()
         }
         cell.config(indexPath: indexPath)
+        if isHeroActive && shallAnimateCellLoad {
+            cell.contentView.alpha = 0
+        }
         return cell
     }
 }
