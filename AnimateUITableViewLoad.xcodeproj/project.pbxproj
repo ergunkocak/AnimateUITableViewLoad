@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682A1BA82146AC7500CAC84D /* Complex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682A1BA72146AC7500CAC84D /* Complex.storyboard */; };
+		6832862C2146A6E8003B2CEB /* ComplexItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6832862B2146A6E8003B2CEB /* ComplexItemVC.swift */; };
+		6832862E2146A743003B2CEB /* ComplexTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6832862D2146A743003B2CEB /* ComplexTVC.swift */; };
+		683286322146AAD5003B2CEB /* ComplexItemsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683286312146AAD5003B2CEB /* ComplexItemsCVC.swift */; };
+		683286342146AB67003B2CEB /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683286332146AB67003B2CEB /* CollectionCell.swift */; };
 		684305D221469E6300ED43DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684305D121469E6300ED43DF /* AppDelegate.swift */; };
 		684305D421469E6300ED43DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684305D321469E6300ED43DF /* ViewController.swift */; };
 		684305D721469E6300ED43DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 684305D521469E6300ED43DF /* Main.storyboard */; };
@@ -18,6 +23,11 @@
 
 /* Begin PBXFileReference section */
 		3F72F0BBAB25A796201A07FF /* Pods-AnimateUITableViewLoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimateUITableViewLoad.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimateUITableViewLoad/Pods-AnimateUITableViewLoad.release.xcconfig"; sourceTree = "<group>"; };
+		682A1BA72146AC7500CAC84D /* Complex.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Complex.storyboard; sourceTree = "<group>"; };
+		6832862B2146A6E8003B2CEB /* ComplexItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexItemVC.swift; sourceTree = "<group>"; };
+		6832862D2146A743003B2CEB /* ComplexTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexTVC.swift; sourceTree = "<group>"; };
+		683286312146AAD5003B2CEB /* ComplexItemsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexItemsCVC.swift; sourceTree = "<group>"; };
+		683286332146AB67003B2CEB /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		684305CE21469E6300ED43DF /* AnimateUITableViewLoad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimateUITableViewLoad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		684305D121469E6300ED43DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		684305D321469E6300ED43DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +61,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6832862F2146A9AD003B2CEB /* Complex */ = {
+			isa = PBXGroup;
+			children = (
+				682A1BA72146AC7500CAC84D /* Complex.storyboard */,
+				683286312146AAD5003B2CEB /* ComplexItemsCVC.swift */,
+				6832862B2146A6E8003B2CEB /* ComplexItemVC.swift */,
+				6832862D2146A743003B2CEB /* ComplexTVC.swift */,
+				683286332146AB67003B2CEB /* CollectionCell.swift */,
+			);
+			path = Complex;
+			sourceTree = "<group>";
+		};
+		683286302146A9BA003B2CEB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				684305D521469E6300ED43DF /* Main.storyboard */,
+				684305DA21469E6400ED43DF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		684305C521469E6300ED43DF = {
 			isa = PBXGroup;
 			children = (
@@ -72,13 +103,13 @@
 		684305D021469E6300ED43DF /* AnimateUITableViewLoad */ = {
 			isa = PBXGroup;
 			children = (
+				683286302146A9BA003B2CEB /* Storyboard */,
 				684305D121469E6300ED43DF /* AppDelegate.swift */,
 				684305D321469E6300ED43DF /* ViewController.swift */,
-				684305D521469E6300ED43DF /* Main.storyboard */,
-				684305D821469E6400ED43DF /* Assets.xcassets */,
-				684305DA21469E6400ED43DF /* LaunchScreen.storyboard */,
-				684305DD21469E6400ED43DF /* Info.plist */,
 				684305E321469FFA00ED43DF /* Cell.swift */,
+				6832862F2146A9AD003B2CEB /* Complex */,
+				684305D821469E6400ED43DF /* Assets.xcassets */,
+				684305DD21469E6400ED43DF /* Info.plist */,
 			);
 			path = AnimateUITableViewLoad;
 			sourceTree = "<group>";
@@ -152,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				684305DC21469E6400ED43DF /* LaunchScreen.storyboard in Resources */,
+				682A1BA82146AC7500CAC84D /* Complex.storyboard in Resources */,
 				684305D921469E6400ED43DF /* Assets.xcassets in Resources */,
 				684305D721469E6300ED43DF /* Main.storyboard in Resources */,
 			);
@@ -165,15 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AnimateUITableViewLoad/Pods-AnimateUITableViewLoad-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 			);
@@ -187,15 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AnimateUITableViewLoad-checkManifestLockResult.txt",
 			);
@@ -211,9 +235,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				683286322146AAD5003B2CEB /* ComplexItemsCVC.swift in Sources */,
+				6832862E2146A743003B2CEB /* ComplexTVC.swift in Sources */,
 				684305D421469E6300ED43DF /* ViewController.swift in Sources */,
 				684305D221469E6300ED43DF /* AppDelegate.swift in Sources */,
+				683286342146AB67003B2CEB /* CollectionCell.swift in Sources */,
 				684305E421469FFA00ED43DF /* Cell.swift in Sources */,
+				6832862C2146A6E8003B2CEB /* ComplexItemVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
