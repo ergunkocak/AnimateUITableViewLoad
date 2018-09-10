@@ -19,8 +19,8 @@ class ComplexItemsCVC: UICollectionViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueItem" {
-            if let targetVC = segue.destination as? ComplexItemVC {
+        if segue.identifier == "segueItem1" {
+            if let targetVC = segue.destination as? ComplexItem1VC {
                 targetVC.itemIndexPath = selectedIndexPath
             }
         }
@@ -48,6 +48,6 @@ class ComplexItemsCVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndexPath = indexPath
-        performSegue(withIdentifier: "segueItem", sender: self)
+        performSegue(withIdentifier: "segueItem1", sender: self)
     }
 }

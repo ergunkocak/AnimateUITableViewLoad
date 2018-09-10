@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		682A1BA82146AC7500CAC84D /* Complex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682A1BA72146AC7500CAC84D /* Complex.storyboard */; };
+		682A1BAA2146B96000CAC84D /* ComplexSubTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682A1BA92146B96000CAC84D /* ComplexSubTableCell.swift */; };
+		682A1BAD2146C4A300CAC84D /* ComplexItem1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682A1BAC2146C4A300CAC84D /* ComplexItem1VC.swift */; };
 		6832862C2146A6E8003B2CEB /* ComplexItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6832862B2146A6E8003B2CEB /* ComplexItemVC.swift */; };
 		6832862E2146A743003B2CEB /* ComplexTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6832862D2146A743003B2CEB /* ComplexTVC.swift */; };
 		683286322146AAD5003B2CEB /* ComplexItemsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683286312146AAD5003B2CEB /* ComplexItemsCVC.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		3F72F0BBAB25A796201A07FF /* Pods-AnimateUITableViewLoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimateUITableViewLoad.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimateUITableViewLoad/Pods-AnimateUITableViewLoad.release.xcconfig"; sourceTree = "<group>"; };
 		682A1BA72146AC7500CAC84D /* Complex.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Complex.storyboard; sourceTree = "<group>"; };
+		682A1BA92146B96000CAC84D /* ComplexSubTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexSubTableCell.swift; sourceTree = "<group>"; };
+		682A1BAC2146C4A300CAC84D /* ComplexItem1VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexItem1VC.swift; sourceTree = "<group>"; };
 		6832862B2146A6E8003B2CEB /* ComplexItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexItemVC.swift; sourceTree = "<group>"; };
 		6832862D2146A743003B2CEB /* ComplexTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexTVC.swift; sourceTree = "<group>"; };
 		683286312146AAD5003B2CEB /* ComplexItemsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexItemsCVC.swift; sourceTree = "<group>"; };
@@ -61,14 +65,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		682A1BAB2146B96B00CAC84D /* ItemDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6832862B2146A6E8003B2CEB /* ComplexItemVC.swift */,
+				682A1BAC2146C4A300CAC84D /* ComplexItem1VC.swift */,
+				6832862D2146A743003B2CEB /* ComplexTVC.swift */,
+				682A1BA92146B96000CAC84D /* ComplexSubTableCell.swift */,
+			);
+			path = ItemDetail;
+			sourceTree = "<group>";
+		};
 		6832862F2146A9AD003B2CEB /* Complex */ = {
 			isa = PBXGroup;
 			children = (
 				682A1BA72146AC7500CAC84D /* Complex.storyboard */,
 				683286312146AAD5003B2CEB /* ComplexItemsCVC.swift */,
-				6832862B2146A6E8003B2CEB /* ComplexItemVC.swift */,
-				6832862D2146A743003B2CEB /* ComplexTVC.swift */,
 				683286332146AB67003B2CEB /* CollectionCell.swift */,
+				682A1BAB2146B96B00CAC84D /* ItemDetail */,
 			);
 			path = Complex;
 			sourceTree = "<group>";
@@ -237,10 +251,12 @@
 			files = (
 				683286322146AAD5003B2CEB /* ComplexItemsCVC.swift in Sources */,
 				6832862E2146A743003B2CEB /* ComplexTVC.swift in Sources */,
+				682A1BAD2146C4A300CAC84D /* ComplexItem1VC.swift in Sources */,
 				684305D421469E6300ED43DF /* ViewController.swift in Sources */,
 				684305D221469E6300ED43DF /* AppDelegate.swift in Sources */,
 				683286342146AB67003B2CEB /* CollectionCell.swift in Sources */,
 				684305E421469FFA00ED43DF /* Cell.swift in Sources */,
+				682A1BAA2146B96000CAC84D /* ComplexSubTableCell.swift in Sources */,
 				6832862C2146A6E8003B2CEB /* ComplexItemVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

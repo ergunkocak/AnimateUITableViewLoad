@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,35 +80,26 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="YJ5-FA-AgY" kind="presentation" identifier="segueItem" modalPresentationStyle="currentContext" id="gpq-wk-B1P"/>
+                        <segue destination="YJ5-FA-AgY" kind="presentation" identifier="segueItem1" modalPresentationStyle="overCurrentContext" id="gpq-wk-B1P"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAL-ql-1xc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="922"/>
         </scene>
-        <!--Complex ItemVC-->
+        <!--Complex Item1VC-->
         <scene sceneID="QFu-tb-I94">
             <objects>
-                <viewController id="YJ5-FA-AgY" customClass="ComplexItemVC" customModule="AnimateUITableViewLoad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YJ5-FA-AgY" customClass="ComplexItem1VC" customModule="AnimateUITableViewLoad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XUR-AI-ZeY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marguerite" translatesAutoresizingMaskIntoConstraints="NO" id="pEs-HI-mgR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="199"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="199" id="2ha-rY-MwH"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marguerite" translatesAutoresizingMaskIntoConstraints="NO" id="pEs-HI-mgR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="444.5"/>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-0L-ubb">
-                                <rect key="frame" x="0.0" y="218" width="375" height="449"/>
-                                <connections>
-                                    <segue destination="dR9-dH-jol" kind="embed" identifier="segueEmbedComplexTable" id="Asd-et-7kE"/>
-                                </connections>
-                            </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb0-p0-hVt">
-                                <rect key="frame" x="16" y="186" width="17" height="24"/>
+                                <rect key="frame" x="16" y="404.5" width="17" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -125,20 +118,35 @@
                                     <action selector="onDismiss:" destination="YJ5-FA-AgY" eventType="touchUpInside" id="Hlo-RJ-EGR"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3DV-dG-fvD">
+                                <rect key="frame" x="0.0" y="944.5" width="375" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-0L-ubb">
+                                <rect key="frame" x="0.0" y="944.5" width="375" height="0.0"/>
+                                <connections>
+                                    <segue destination="dR9-dH-jol" kind="embed" identifier="segueEmbedComplexTable" id="Asd-et-7kE"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="wlz-E9-djC" firstAttribute="bottom" secondItem="3DV-dG-fvD" secondAttribute="bottom" priority="999" id="2YC-5h-xFv"/>
+                            <constraint firstItem="aqZ-0L-ubb" firstAttribute="trailing" secondItem="3DV-dG-fvD" secondAttribute="trailing" id="3kj-ch-v6b"/>
+                            <constraint firstItem="aqZ-0L-ubb" firstAttribute="leading" secondItem="3DV-dG-fvD" secondAttribute="leading" id="5GW-WD-l81"/>
+                            <constraint firstItem="Pb0-p0-hVt" firstAttribute="leading" secondItem="pEs-HI-mgR" secondAttribute="leading" constant="16" id="7fL-qt-G6n"/>
                             <constraint firstItem="A70-yw-z74" firstAttribute="top" secondItem="wlz-E9-djC" secondAttribute="top" constant="8" id="8lT-JT-uOo"/>
-                            <constraint firstItem="aqZ-0L-ubb" firstAttribute="top" secondItem="Pb0-p0-hVt" secondAttribute="bottom" constant="8" id="PTa-7z-DjT"/>
+                            <constraint firstItem="Pb0-p0-hVt" firstAttribute="bottom" secondItem="pEs-HI-mgR" secondAttribute="bottom" constant="-16" id="CsY-zY-PSS"/>
+                            <constraint firstAttribute="topMargin" secondItem="pEs-HI-mgR" secondAttribute="top" constant="20" id="HMD-47-HMH"/>
                             <constraint firstItem="wlz-E9-djC" firstAttribute="trailing" secondItem="A70-yw-z74" secondAttribute="trailing" constant="8" id="S8q-8a-evT"/>
+                            <constraint firstItem="aqZ-0L-ubb" firstAttribute="bottom" secondItem="3DV-dG-fvD" secondAttribute="bottom" id="SJI-6k-4Y4"/>
                             <constraint firstItem="pEs-HI-mgR" firstAttribute="leading" secondItem="wlz-E9-djC" secondAttribute="leading" id="Whf-Nw-Uep"/>
-                            <constraint firstItem="pEs-HI-mgR" firstAttribute="top" secondItem="wlz-E9-djC" secondAttribute="top" id="YKs-y9-fUS"/>
-                            <constraint firstItem="wlz-E9-djC" firstAttribute="bottom" secondItem="aqZ-0L-ubb" secondAttribute="bottom" id="YvE-Cn-FYF"/>
+                            <constraint firstItem="wlz-E9-djC" firstAttribute="trailing" secondItem="3DV-dG-fvD" secondAttribute="trailing" id="aN7-To-p5g"/>
                             <constraint firstItem="wlz-E9-djC" firstAttribute="trailing" secondItem="pEs-HI-mgR" secondAttribute="trailing" id="bhD-eT-Cm7"/>
-                            <constraint firstItem="Pb0-p0-hVt" firstAttribute="leading" secondItem="wlz-E9-djC" secondAttribute="leading" constant="16" id="e1f-PD-OUN"/>
-                            <constraint firstItem="aqZ-0L-ubb" firstAttribute="top" secondItem="pEs-HI-mgR" secondAttribute="bottom" constant="-1" id="pA1-Gl-sxr"/>
-                            <constraint firstItem="wlz-E9-djC" firstAttribute="trailing" secondItem="aqZ-0L-ubb" secondAttribute="trailing" id="q5r-r9-Fbn"/>
-                            <constraint firstItem="aqZ-0L-ubb" firstAttribute="leading" secondItem="wlz-E9-djC" secondAttribute="leading" id="skj-gI-L7B"/>
+                            <constraint firstItem="3DV-dG-fvD" firstAttribute="leading" secondItem="wlz-E9-djC" secondAttribute="leading" id="c1b-Yn-aVb"/>
+                            <constraint firstItem="pEs-HI-mgR" firstAttribute="height" secondItem="XUR-AI-ZeY" secondAttribute="height" multiplier="2:3" id="iWj-24-su3"/>
+                            <constraint firstItem="aqZ-0L-ubb" firstAttribute="top" secondItem="3DV-dG-fvD" secondAttribute="top" id="mKn-cn-Mil"/>
+                            <constraint firstItem="3DV-dG-fvD" firstAttribute="top" secondItem="pEs-HI-mgR" secondAttribute="bottom" constant="500" id="ySl-Ru-M9h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wlz-E9-djC"/>
                     </view>
@@ -148,8 +156,11 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="constraintViewBottomTop" destination="ySl-Ru-M9h" id="gMh-ys-911"/>
+                        <outlet property="containerSubTable" destination="aqZ-0L-ubb" id="ksh-Hj-jIA"/>
                         <outlet property="imageItem" destination="pEs-HI-mgR" id="DWD-q9-2fu"/>
                         <outlet property="labelItem" destination="Pb0-p0-hVt" id="zKp-39-j2a"/>
+                        <outlet property="viewBottomBg" destination="3DV-dG-fvD" id="9Xw-dn-9OL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZH-Xu-NLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,11 +172,11 @@
             <objects>
                 <tableViewController id="dR9-dH-jol" customClass="ComplexTVC" customModule="AnimateUITableViewLoad" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="jWI-2X-aW7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="449"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="K00-gq-bEH" customClass="Cell" customModule="AnimateUITableViewLoad" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="K00-gq-bEH" customClass="ComplexSubTableCell" customModule="AnimateUITableViewLoad" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="1" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K00-gq-bEH" id="W9W-X7-Vpp">
@@ -187,7 +198,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="label" destination="jr3-Vh-YPH" id="RDV-IJ-sni"/>
+                                    <outlet property="label" destination="jr3-Vh-YPH" id="srq-nE-xSN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

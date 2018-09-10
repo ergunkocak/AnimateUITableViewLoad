@@ -13,10 +13,28 @@ class ComplexTVC: UITableViewController {
     var isHeroActive = true
     var shallAnimateCellLoad = true
 
-    var mainItemIndexPath: IndexPath?
+    var mainItemIndexPath: IndexPath!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if isHeroActive && shallAnimateCellLoad {
+            animateCellLoad()
+            shallAnimateCellLoad = false
+        }
+    }
+
+    func animateCellLoad() {
+        var delayCounter: TimeInterval = 0
+        for cell in tableView.visibleCells {
+            UIView.animate(withDuration: TimeInterval(delayCounter), animations: {
+                cell.contentView.alpha = 1.0
+            }, completion: nil)
+            delayCounter += 0.15
+        }
     }
 
     // MARK: - TableView Datasource
@@ -32,14 +50,15 @@ class ComplexTVC: UITableViewController {
     // MARK: - TableView Delegate
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? Cell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ComplexSubTableCell else {
             print("Warning: cell can not be found!")
             return UITableViewCell()
         }
-        cell.config(indexPath: indexPath)
+        cell.config(mainItemIndexPath: mainItemIndexPath, indexPath: indexPath)
         if isHeroActive && shallAnimateCellLoad {
             cell.contentView.alpha = 0
         }
+        print("sub cell \(indexPath.row)")
         return cell
     }
 

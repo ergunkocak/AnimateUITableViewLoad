@@ -9,12 +9,18 @@
 import UIKit
 import Hero
 
-class ComplexItemVC: UIViewController {
+class ComplexItemBaseVC: UIViewController {
 
     @IBOutlet weak var imageItem: UIImageView!
     @IBOutlet weak var labelItem: UILabel!
+    @IBOutlet weak var containerSubTable: UIView!
+    @IBOutlet weak var viewBottomBg: UIView!
 
     var itemIndexPath: IndexPath?
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +32,14 @@ class ComplexItemVC: UIViewController {
         imageItem.hero.id = "itemImage_\(indexPath.row)"
         labelItem.hero.id = "itemLabel_\(indexPath.row)"
         labelItem.text = "Item \(indexPath.row)"
+    }
 
-        print("labelItem.hero.id \(labelItem.hero.id)")
-
-        imageItem.hero.modifiers = [.translate(y:100)]
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -94,7 +94,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="ygg-K1-8Uj"/>
                                         </constraints>
-                                        <state key="normal" title="Complex"/>
+                                        <state key="normal" title="Complex 1"/>
                                         <connections>
                                             <segue destination="fgT-Qc-wwW" kind="show" id="0pL-o2-Qqn"/>
                                         </connections>
